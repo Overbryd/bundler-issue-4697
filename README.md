@@ -10,7 +10,7 @@ This repo contains a reproduction of https://github.com/bundler/bundler/issues/4
     $ eval "$(docker-machine env default)"
     
     # build the provided Dockerfile
-    $ docker build -t bundler-issue-4697
+    $ docker build -t bundler-issue-4697 .
     
     # enter a bash console in the Dockerfile
     $ docker run -ti bundler-issue-4697
