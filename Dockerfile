@@ -22,13 +22,12 @@ WORKDIR /home/app/current
 COPY Gemfile /home/app/current/Gemfile
 COPY Gemfile.lock /home/app/current/Gemfile.lock
 
-RUN su app -c '\
-  mkdir ~/.bundle \
+USER app
+
+RUN mkdir ~/.bundle \
   && bundle config --global path ~/gems \
   && bundle install --retry=3 --no-cache --clean --frozen --jobs=4 \
-  && rm -rf /home/app/current/.bundle'
-
-USER app
+  && rm -rf /home/app/current/.bundle
 
 CMD /bin/bash
 
