@@ -12,7 +12,7 @@ This repo contains a reproduction of https://github.com/bundler/bundler/issues/4
     # build the provided Dockerfile
     $ docker build -t bundler-issue-4697 .
     
-    # enter a bash console in the Dockerfile
+    # enter a bash console of the image
     $ docker run -ti bundler-issue-4697
     
     # now within the docker image
